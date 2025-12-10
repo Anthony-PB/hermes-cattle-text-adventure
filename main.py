@@ -1,8 +1,5 @@
 import time
 import sys
-
-# --- DEPENDENCY CHECK ---
-# This block ensures the grader sees the instructions if the library is missing.
 try:
     import readchar
 except ImportError:
@@ -16,7 +13,6 @@ except ImportError:
     print("!"*50 + "\n")
     input("Press Enter to exit...")
     sys.exit()
-# ------------------------
 
 def typewriter(text, delay=0.03):
     """Prints text character-by-character."""
