@@ -143,28 +143,38 @@ def stage_5_trial(state):
         return True
 
 def main():
-    state = GameState()
-    
-    # Title Screen
-    print("\n" + "="*30)
-    print("      PROJECT MAIA")
-    print("="*30)
-    print("Tip: Ensure sound is on (metaphorically).")
-    time.sleep(1)
+    try:
+        state = GameState()
+        
+        # Title Screen
+        print("\n" + "="*30)
+        print("      PROJECT MAIA")
+        print("="*30)
+        print("Tip: Ensure sound is on (metaphorically).")
+        time.sleep(1)
 
-    # Execute Stages
-    if stage_1_birth(state):
-        if stage_2_cattle(state):
-            if stage_3_travel(state):
-                if stage_4_hide(state):
-                    if stage_5_trial(state):
-                        # Victory Screen
-                        print("\n" + "="*30)
-                        print(f"VICTORY! Final Score: {state.motif_points}/5")
-                        print("You have earned your place on Olympus.")
-                        print("="*30)
-                        input("\nPress Enter to exit...")
-                        return
+        # Execute Stages
+        if stage_1_birth(state):
+            if stage_2_cattle(state):
+                if stage_3_travel(state):
+                    if stage_4_hide(state):
+                        if stage_5_trial(state):
+                            # Victory Screen
+                            print("\n" + "="*30)
+                            print(f"VICTORY! Final Score: {state.motif_points}/5")
+                            print("You have earned your place on Olympus.")
+                            print("="*30)
+                            input("\nPress Enter to exit...")
+                            return
+    except KeyboardInterrupt:
+        print("\n")
+        print("-"*30)
+        print("*"*5 + " Exited Forcefully. " + "*"*5)
+        print("-"*30)
+        return
+    except Exception as e:
+        print("Critical Error. Sorry!")
+        print(e)
 
     # Game Over Screen
     print("\n[GAME OVER]")
