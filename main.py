@@ -199,7 +199,9 @@ def main():
         print("\n" + "="*30)
         print("      PROJECT MAIA")
         print("="*30)
-        print("Tip: Ensure sound is on (metaphorically).")
+        print("TIP: Ensure sound is on (metaphorically).")
+        print("")
+        print("FINAL TIP: To select a choice press the corresponding character on your keyboard.")
         time.sleep(1)
 
         # Execute Stages
